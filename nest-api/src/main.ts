@@ -6,7 +6,12 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api'); // so routes start with /api
 
-  await app.listen(3000);
-  console.log(`Server running on http://localhost:3000/api`);
+  const server_port = 4000;
+  await app.listen(server_port);
+  console.log(`
+    --------------------------------------------------------
+      \t Server running on http://localhost:${server_port}/api
+    --------------------------------------------------------
+    `);
 }
 bootstrap();
